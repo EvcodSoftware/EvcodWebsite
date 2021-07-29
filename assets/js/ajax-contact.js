@@ -22,6 +22,7 @@ $(function() {
 		})
 		.done(function(response) {
 			// Make sure that the formMessages div has the 'success' class.
+			console.log("response",response);
 			$(formMessages).removeClass('error');
 			$(formMessages).addClass('success');
 
@@ -33,14 +34,18 @@ $(function() {
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.
-			$(formMessages).removeClass('success');
-			$(formMessages).addClass('error');
-
+			console.log("data",data);
 			// Set the message text.
-			if (data.responseText !== '') {
+			if (data.status == 400) {
+				$(formMessages).addClass('error');
+				$(formMessages).removeClass('success');
+				$(formMessages).text('Please fill in the form before send.');
+			} else if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
 			} else {
-				$(formMessages).text('Oops! An error occured and your message could not be sent.');
+				$(formMessages).removeClass('error');
+				$(formMessages).addClass('success');
+				$(formMessages).text('The Message is sent. Thank you for getting in touch!');
 			}
 		});
 	});
