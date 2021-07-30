@@ -16,11 +16,11 @@ $(function() {
         if (scroll < 20) {
             $(".navbar-area").removeClass("sticky");
             $(".brand-name").addClass("text-light");
-            $(".navbar-area img").attr("src", "assets/images/logo.svg");
+            // $(".navbar-area img").attr("src", "assets/images/logo.png");
         } else {
             $(".navbar-area").addClass("sticky");
             $(".brand-name").removeClass("text-light");
-            $(".navbar-area img").attr("src", "assets/images/logo-2.png");
+            // $(".navbar-area img").attr("src", "assets/images/logo-2.png");
         }
     });
 
@@ -81,7 +81,7 @@ $(function() {
         prevArrow: '<span class="prev"><i class="lni lni-arrow-left"></i></span>',
         nextArrow: '<span class="next"><i class="lni lni-arrow-right"></i></span>',
         dots: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000,
         responsive: [
             {
@@ -146,7 +146,7 @@ $(function() {
         prevArrow: '<span class="prev"><i class="lni lni-arrow-left"></i></span>',
         nextArrow: '<span class="next"><i class="lni lni-arrow-right"></i></span>',
         infinite: true,
-       autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000,
         speed: 800,
         slidesToShow: 1,
@@ -183,7 +183,7 @@ $(function() {
     });
     
     
-    //Animate the scroll to yop
+    //Animate the scroll to top
     $('.back-to-top').on('click', function(event) {
         event.preventDefault();
         

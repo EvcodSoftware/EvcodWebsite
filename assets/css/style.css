@@ -3248,7 +3248,7 @@ p.form-message.success, p.form-message.error {
 /*# sourceMappingURL=style.css.map */
 
 .logo {
-  width: 10%;
+  width: 74px;
 }
 
 .text-light {
@@ -3257,4 +3257,5 @@ p.form-message.success, p.form-message.error {
 
 .brand-name {
   padding-left: 10px;
+  font-size: 15px !important;
 }
