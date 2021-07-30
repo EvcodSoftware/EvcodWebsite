@@ -20,7 +20,7 @@ $(function() {
         } else {
             $(".navbar-area").addClass("sticky");
             $(".brand-name").removeClass("text-light");
-            $(".navbar-area img").attr("src", "assets/images/logo-2.svg");
+            $(".navbar-area img").attr("src", "assets/images/logo-2.png");
         }
     });
 
